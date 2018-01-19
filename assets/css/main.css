@@ -19,7 +19,8 @@
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;
+		display: inline-table;
+		width:100%; 
 	}
 
 	body {
@@ -2746,7 +2747,7 @@
 
 		.wrapper.style3 {
 			background-attachment: fixed;
-			background-image: url("images/overlay.png"), url("../../images/capa4.jpg");
+			background-image: url("images/overlay.png");
 			background-position: center center;
 			background-size: cover;
 		}
@@ -2909,6 +2910,8 @@
 			#header.alt nav {
 				right: 2em;
 				top: 2em;
+				text-align:right;
+				padding-right: 1em;
 			}
 
 				#header.alt nav a {
@@ -3101,7 +3104,7 @@
 	#banner {
 		padding: 16em 0 13em 0;
 		background-attachment: fixed;
-		background-image: url("images/overlay.png"), url("../../images/capa4.jpg");
+		background-image: url("images/overlay.png");
 		background-position: center top;
 		background-size: cover;
 		line-height: 1.75;
@@ -3110,6 +3113,15 @@
 
 		#banner:last-child {
 			margin-bottom: 0;
+		}
+
+		#banner about {
+			color: #ffffff;
+			display: inline-block;
+			font-size: 1.0em;
+			line-height: 1.35;
+			padding-left: 20%;
+			padding-right: 20%;
 		}
 
 		#banner h2 {
@@ -3121,11 +3133,12 @@
 		}
 
 		#banner p {
-			color: #aaa;
+			color: #ffffff;
 			font-size: 1.5em;
 			margin-bottom: 1.75em;
-			text-transform: uppercase;
+			text-transform: uppercase;			
 		}
+
 
 		@media screen and (max-width: 1280px) {
 
@@ -3279,8 +3292,10 @@
 		}
 
 body {
+	
         background: #555 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/P//PwM6YGLAAuCCmpqacC2MRGsHCDAA+fIHfeQbO8kAAAAASUVORK5CYII=);
-        font: 13px 'Lucida sans', Arial, Helvetica;
+
+		font: 13px 'Lucida sans', Arial, Helvetica;
         color: #eee;
         text-align: center;
     }
@@ -3293,7 +3308,8 @@ body {
     
     .cf:before, .cf:after{
       content:"";
-      display:table;
+	  display:table;
+	  background-image: url(images/overlay.png);
     }
     
     .cf:after{
